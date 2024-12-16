@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/style1.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clothes Donation Form</title>
+  <style>
+    /* Basic styling for a clean layout */
+    .donation-form {
+      width: 500px;
+      margin: 50px auto;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    .form-control {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+    .btn {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <h1>Thank You for Donating clothes!</h1>
+        <p>Please fill out the following details to help us coordinate your clothe donation.</p>
+    </header>
+  <div class="donation-form">
+    <h2>Clothes Donation Form</h2>
+    <form action="cothes_php.php" method="post" enctype="multipart/form-data">
+      <div class="form-group">
+        <label class="form-label" for="name">Full Name:</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="email">Email Address:</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="phone">Phone Number:</label>
+        <input type="tel" class="form-control" id="phone" name="phone">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Clothe for:</label>
+        <select class="form-control" name="clothe_type">
+          <option value="Men">Men</option>
+          <option value="Women">Women</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Preferred Pick-up Date:</label>
+        <input type="date" class="form-control" id="preferred_date" name="preferred_date" >
+      </div>
+      <div class="form-group">
+        <label class="form-label">Preferred Pick-up Time:</label>
+        <input type="text" class="form-control" id="preferred_time" name="preferred_time" placeholder="e.g., Between 10am and 12pm">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Preferred Pick-up Address:</label>
+        <input type="text" class="form-control" id="preferred_address" name="preferred_address" placeholder="Full address for pick-up">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Additional Message (Optional):</label>
+        <textarea class="form-control" name="message"></textarea>
+      </div>
+      <button type="submit" class="btn">Donate Now</button>
+    </form>
+  </div>
+</body>
+</html>

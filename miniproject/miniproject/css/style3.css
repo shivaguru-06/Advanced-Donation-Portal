@@ -1,0 +1,80 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Set minimum height for full viewport */
+    background-color: #f0f0f0; /* Optional background color */
+    margin: 0;
+  padding: 0;
+  height: 100vh; /* Set full viewport height */
+  flex-direction: column;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-around;
+    width: 80%; /* Adjust container width as needed */
+    max-width: 700px; /* Optional max width for responsiveness */
+    z-index:1;
+  }
+  .background-container {
+    position: relative; /* Required for positioning the image and buttons */
+    flex: 1; /* Occupy remaining space after buttons */
+    display: flex; /* Allow positioning buttons within container */
+    justify-content: center; /* Center buttons horizontally */
+    align-items: center; /* Center buttons vertically */
+    z-index: 1;
+  }
+  
+  .background-image {
+    width: 100vw; /* Stretch image to cover viewport width */
+    height: 50vw; /* Stretch image to cover viewport height */
+    object-fit: cover; /* Ensure image fills viewport while maintaining aspect ratio */
+    position: absolute; /* Position image on top of other elements */
+    top:0; /* Align image to top of container */
+    left:-10; /* Align image to left of container */
+    z-index: -1; /* Set image behind other elements (buttons) */
+  }
+  
+  
+  .donation-button {
+    /* Base styles for all buttons */
+    background-color: #4CAF50; /* Green color */
+    color: white;
+    padding: 30px 60px; /* Increased padding for bigger buttons */
+    border: none;
+    border-radius: 10px; /* Larger border radius for softer look */
+    cursor: pointer;
+    font-size: 24px; /* Increased font size for larger text */
+    text-align: center; /* Center text within buttons */
+    margin: 15px; /* Increased margin for better spacing */
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional subtle shadow */
+    z-index:1;
+  }
+  
+  /* Individual button styles (optional) */
+  
+  .donation-button.food {
+    background-color: #ff9800; /* Orange for food */
+  }
+  
+  .donation-button.clothes {
+    background-color: #3f51b5; /* Blue for clothes */
+  }
+  
+  .donation-button.footwear {
+    background-color: #9ccc65; /* Green for footwear */
+  }
+  
+  .donation-button.fund {
+    background-color: #e74c3c; /* Red for fund */
+  }
+  
+  .donation-button:hover {
+    background-color: #3e8e41; /* Darker green on hover (default for all buttons) */
+  }
+  
